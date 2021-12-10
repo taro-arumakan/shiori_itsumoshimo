@@ -10,7 +10,12 @@ function checkStorageSupport() {
 }
 
 function getTotalHeight() {
-    return document.body.clientHeight;
+    var body = document.body,
+        html = document.documentElement;
+    var height = Math.max(
+            body.scrollHeight, body.offsetHeight, 
+            html.clientHeight, html.scrollHeight, html.offsetHeight);
+    return height;
 }
 
 function getSavedPercent() {
@@ -64,7 +69,7 @@ function removeCookie() {
 
 /******* Handler *******/
 
-var saveButton = document.getElementById("mobile-shiori-widget-wrap");
+var saveButton = document.getElementById("mobile-shiori");
 
 saveButton.onclick = function () {
     var h2 = getClosestElementByTagName('h2');
@@ -82,7 +87,9 @@ var storageSupported = checkStorageSupport(),
 
 if (percent > 0) {
     if (confirm("挟んだしおりから読みますか?")) {
-        document.documentElement.scrollTop = percent * getTotalHeight(); // with jQuery, $("html, body").animate({ scrollTop: position });
+        // with jQuery, $("html, body").animate({ scrollTop: position });
+        // TODO 47.98px is height of the header. Change on other devices accordingly.
+        document.documentElement.scrollTop = percent * getTotalHeight() - 47.98
     }
     storageSupported ? removeFromStorage() : removeCookie();
 }
