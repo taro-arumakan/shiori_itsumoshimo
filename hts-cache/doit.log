@@ -1,0 +1,8 @@
+https://itumosimo.jp/eq-measures/ -O itsumoshimo +*.itsumoshimo.jp/* -v -F "Mozilla/5.0 (iPhone; CPU iPhone OS 15_1_1 like Mac OS X) AppleWebKit/605.1.15"
+File generated automatically on Thu, 09 Dec 2021 16:48:06, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+

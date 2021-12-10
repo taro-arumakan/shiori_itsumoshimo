@@ -1,0 +1,3 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+16:48:07	105/105	---MCZ	200	added ('OK')	text/plain	date:Thu,%2009%20Dec%202021%2007:48:08%20GMT	https://itumosimo.jp/robots.txt		(from )
+16:48:08	323112/323112	---MCZ	200	added ('OK')	text/html	date:Thu,%2009%20Dec%202021%2001:31:09%20GMT	https://itumosimo.jp/eq-measures/	itsumoshimo/itumosimo.jp/eq-measures/index.html	(from )
