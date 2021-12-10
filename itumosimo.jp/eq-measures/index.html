@@ -954,6 +954,74 @@ i {
 }
 
 
+/* Shiori */
+#mobile-shiori-widget-wrap {
+    position: fixed;
+    bottom: 150px;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+    counter-reset: mobile-toc;
+}
+
+#mobile-shiori-widget-wrap label .mobile-shiori-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e37878;
+    /* ボタン色 */
+    box-shadow: 2px 2px 2px #ccc;
+    transition: ease-out 0.3s;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+#mobile-shiori-widget-wrap label .mobile-shiori-button .mobile-shiori-button-title {
+    color: #fff;
+    /* ボタン文字色 */
+    font-size: 0.65em;
+    letter-spacing: 0;
+    position: absolute;
+    bottom: 11px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#mobile-shiori-widget-wrap label:hover {
+    background: #efefef;
+}
+
+#mobile-shiori-widget-wrap input {
+    display: none;
+}
+
+#mobile-shiori-widget-wrap .mobile-shiori-show {
+    display: none;
+}
+
+#mobile-shiori-widget-wrap input:checked~.mobile-shiori-show {
+    border: 1px solid #999;
+    box-shadow: -2px 2px 2px rgba(200, 200, 200, 0.5);
+    background: #fff;
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+    padding: 1em;
+    opacity: 0.97;
+    position: fixed;
+    width: 70%;
+    height: 74%;
+    display: block;
+    animation: 0.5s fade-in;
+    -webkit-animation: 0.5s fade-in;
+    overflow-y: scroll;
+    transform-origin: right bottom;
+}
+/* Shiori END */
+
 /* スマホ追尾目次 */
 
 .mobile-toc-button {
@@ -4230,6 +4298,15 @@ i {
 </div>
 <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 <script type="text/javascript">var sbiajaxurl = "https://itumosimo.jp/wp-admin/admin-ajax.php";</script>
+
+<div id="mobile-shiori-widget-wrap">
+    <label for="mobile-shiori">
+        <div class="mobile-shiori-button">
+            <span class="mobile-shiori-button-title">しおり</span>
+        </div>
+    </label>
+    <input type="checkbox" id="mobile-shiori" />
+</div>
 
 <div id="mobile-toc-widget-wrap">
     <label for="mobile-toc">
